@@ -13,6 +13,8 @@ int main(int argc, char** argv) {
     int draha;
     int cas;
     int poradi=1;
+    int celkovadraha=0;
+    int prumdraha;
     float rychlost;  
    
     FILE *fp;
@@ -31,8 +33,13 @@ int main(int argc, char** argv) {
         rychlost = (float)draha/cas;
         printf("%d. %d metru\t%d sekund\t%.2f m/s\n",poradi,draha,cas,rychlost);
         fprintf(fp2,"%d. %d metru\t%d sekund\t%.2f m/s\n",poradi,draha,cas,rychlost);
+        celkovadraha += draha;
         poradi++;
     }
+    printf("\n");
+    prumdraha = celkovadraha/(poradi-1);
+    printf("prumerna draha je %d metru\n",prumdraha);
+    printf("ze souboru %s bylo precteno %d dvojic cisel\n",SOUBOR1,poradi-1);
 
     if(fclose(fp) == EOF){
         printf("%s Close/read error",SOUBOR1);
