@@ -1,0 +1,12 @@
+1. 940 metru	1234 sekund	0.76 m/s
+2. 19244 metru	2445 sekund	7.87 m/s
+3. 492 metru	19 sekund	25.89 m/s
+4. 7422 metru	2342 sekund	3.17 m/s
+5. 14249 metru	2444 sekund	5.83 m/s
+6. 223 metru	2243 sekund	0.10 m/s
+7. 2555 metru	2344 sekund	1.09 m/s
+8. 233 metru	23 sekund	10.13 m/s
+9. 121425 metru	2324 sekund	52.25 m/s
+10. 242 metru	2219994 sekund	0.00 m/s
+11. 23 metru	11 sekund	2.09 m/s
+12. 155553 metru	242422 sekund	0.64 m/s

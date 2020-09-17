@@ -4,9 +4,15 @@
 #define SOUBOR1 "cisla.txt"
 #define SOUBOR2 "vysledky.txt"
 
+int poradi(int z){
+    
+}
+
+
 int main(int argc, char** argv) {
     int draha;
     int cas;
+    int poradi=1;
     float rychlost;  
    
     FILE *fp;
@@ -23,13 +29,15 @@ int main(int argc, char** argv) {
     }
     while(fscanf(fp,"%d %d",&draha,&cas)==2){
         rychlost = (float)draha/cas;
-        printf("%d metru\t%d sekund\t%.2f m/s\n",draha,cas,rychlost);
+        printf("%d. %d metru\t%d sekund\t%.2f m/s\n",poradi,draha,cas,rychlost);
+        fprintf(fp2,"%d. %d metru\t%d sekund\t%.2f m/s\n",poradi,draha,cas,rychlost);
+        poradi++;
     }
 
-    if(fclose(SOUBOR1) == EOF){
+    if(fclose(fp) == EOF){
         printf("%s Close/read error",SOUBOR1);
     }
-    if(fclose(SOUBOR2) == EOF){
+    if(fclose(fp2) == EOF){
         printf("%s Close/write error",SOUBOR2);
     }
     return (EXIT_SUCCESS);
